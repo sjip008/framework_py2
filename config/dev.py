@@ -27,7 +27,7 @@ DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': APP_CODE[:-1],
+        'NAME': 'hsqapp2',
         'USER': 'hsq',
         'PASSWORD': 'P@ssw0rd1',
         'HOST': '10.64.2.246',

@@ -15,9 +15,9 @@ from .celery import app as celery_app
 # SaaS运行版本，如非必要请勿修改
 RUN_VER = 'open'
 # SaaS应用ID
-APP_CODE = 'hsqapp1'
+APP_CODE = 'hsqapp2'
 # SaaS安全密钥，注意请勿泄露该密钥
-SECRET_KEY = 'a2531495-82e2-44e8-8e70-a0bfb6a0354e'
+SECRET_KEY = 'd2db02aa-7ec9-43b8-8573-7b31820940cc'
 # 蓝鲸SaaS平台URL, 如 https://paas.blueking.com/
 BK_URL = 'http://paas.class.o.qcloud.com'
 
