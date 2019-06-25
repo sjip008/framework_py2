@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- 若您需要使用Kendo UI Professional，请联系版权人获得合法的授权或许可。 -->
+    <!-- Bootstrap css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- kendo ui css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <!--蓝鲸提供的公用样式库 -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk_pack.css" rel="stylesheet">
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <!-- 包括所有kendoui的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/bk/js/bk.js"></script>
+    <!-- 数据埋点统计 -->
+    <script src="http://magicbox.bk.tencent.com/static_api/analysis.js"></script>
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/html5shiv.min.js"></script><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/respond.min.js"></script><![endif]-->
+
+
+    <!-- 静态 变量 自己增加 -->
+    <script>
+        var site_url = '{SITE_URL}'
+        var static_url = '{STATIC_URL}'
+    </script>
+    <script src="${STATIC_URL}js/settings.js"></script>
+    <script src="${STATIC_URL}js/task.js"></script>
+    <!-- 静态 变量  自己增加 结束-->
+</head>
+
+<body class="bg-white" data-bg-color="bg-white">
+    <div class="king-page-box">
+        <div class="king-layout1-header">
+            <nav>
+                <div class="king-header2 navbar navbar-blue  f14">
+                    <div class="nav-container">
+                        <div class="navbar-header">
+                            <button class="pull-right visible-xs navbar-toggle collapsed navbar-toggle-sm" type="button" data-toggle="collapse" data-target="#king-header2-navbar-collapse"> <i class="fa fa-fw fa-ellipsis-v">                    </i> </button>
+                            <a class="navbar-brand" href="javascript:;" title="故障预警系统">
+                                <img src="https://magicbox.bk.tencent.com/static_api/v3/bk/images/logo.png" alt="" class="logo" style="margin-top:-5px;"> </a>
+                        </div>
+                        <div class="navbar-collapse collapse" id="king-header2-navbar-collapse">
+                            <ul class="nav navbar-nav navbar-left hidden-sm">
+                                <li class="open">
+                                    <a href="javascript:void(0);">
+                                        <span>项目信息</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span>故障预警</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span>关键词</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span>数据查询</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span>舆论健康度</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-cog">                            </i>
+                                        <span class="ml10"> 管理配置 </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span> admin </span>
+                                        <span class="avatar">
+                                            <img src="https://magicbox.bk.tencent.com/static_api/v3/components/horizontal_nav9/images/avatar.jpg"> </span>
+                                    </a>
+                                </li>
+                                <li> <a href="javascript:void(0)">                            退出                        </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="king-layout1-main clearfix">
+            <!-- sidebar start -->
+            <div class="king-layout1-sidebar" style="width:216px;">
+                <nav style="height:100%;" class="   f14">
+                    <div class="king-vertical-nav4">
+                        <div class="sidebar-inner">
+                            <ul class="navi">
+                                <li class="has_submenu current open c-open active">
+                                    <a href="javascript:void(0);"> <i class="fa fa-gear ">                        </i>
+                                        <span>首页</span>
+                                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0);">空白<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has_submenu current open c-open">
+                                    <a href="javascript:void(0);"> <i class="fa fa-wrench ">                        </i>
+                                        <span>表单</span>
+                                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0);">表单一<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                        <li><a href="javascript:void(0);">表单二<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                        <li><a href="javascript:void(0);">表单三<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has_submenu current open c-open">
+                                    <a href="javascript:void(0);"> <i class="fa fa-tasks ">                        </i>
+                                        <span>表格</span>
+                                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0);">表格一<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                        <li><a href="javascript:void(0);">表格二<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has_submenu current open c-open">
+                                    <a href="javascript:void(0);"> <i class="fa fa-ellipsis-h ">                        </i>
+                                        <span>其他</span>
+                                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0);">空白<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- sidebar end -->
+            <!-- content start -->
+            <div class="king-content-wrap">
+                <div class="king-layout1-content" style="margin-left: 216px;">
+                    <!-- <div class="king-page-topbar pl20 pr20 {{ marginStyle }}"> -->
+                    <div class="king-page-topbar ">
+                        <h3 class="king-topbar-title mb0">
+                            <span>Breadcrumb</span>
+                        </h3>
+                        <ul class="breadcrumb king-breadcrumb pl0 bg-transparent">
+                            <li><a href="javascript:void(0);">首页</a></li>
+                            <li><a href="javascript:void(0);">组件</a></li>
+                            <li class="active"><a href="javascript:void(0);">面包屑导航</a></li>
+                        </ul>
+                    </div>
+                    <!-- 面板 编辑 开始 -->
+                    <!-- 面板 编辑 结束 -->
+                    <div class="king-tab tab-box ">
+                        <ul id="myTab2" class="nav nav-tabs king-nav-tabs1 king-tab-info">
+                            <li class="active"> <a data-toggle="tab" href="#demo1" aria-expanded="true">首页</a> </li>
+                            <li class=""> <a data-toggle="tab" href="#demo2" aria-expanded="false">关于我们</a> </li>
+                            <li class=""> <a data-toggle="tab" href="#demo3" aria-expanded="false">联系我们</a> </li>
+                        </ul>
+                        <div class="tab-content ">
+                            <div class="tab-pane fade active in" id="demo1" style="">
+                                <table class="table mb0 pr15 ranger-box2  ">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 70px;">#</th>
+                                            <th style="width: 15%;">名称</th>
+                                            <th style="width: 15%;">位置</th>
+                                            <th style="width: 15%;">日期</th>
+                                            <th style="width: 15%;">类型</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 70px;">1</td>
+                                            <td style="width: 15%;">Ravi Kumar</td>
+                                            <td style="width: 15%;">India</td>
+                                            <td style="width: 15%;">23/12/2012</td>
+                                            <td style="width: 15%;">Paid</td>
+                                            <td>
+                                                <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-ok"></i> </button>
+                                                <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-edit"></i> </button>
+                                                <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-remove"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 70px;">2</td>
+                                            <td style="width: 15%;">Ravi Kumar</td>
+                                            <td style="width: 15%;">India</td>
+                                            <td style="width: 15%;">23/12/2012</td>
+                                            <td style="width: 15%;">Paid</td>
+                                            <td>
+                                                <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-ok"></i> </button>
+                                                <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-edit"></i> </button>
+                                                <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-remove"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 70px;">3</td>
+                                            <td style="width: 15%;">Ravi Kumar</td>
+                                            <td style="width: 15%;">India</td>
+                                            <td style="width: 15%;">23/12/2012</td>
+                                            <td style="width: 15%;">Paid</td>
+                                            <td>
+                                                <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-ok"></i> </button>
+                                                <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-edit"></i> </button>
+                                                <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-remove"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 70px;">4</td>
+                                            <td style="width: 15%;">Ravi Kumar</td>
+                                            <td style="width: 15%;">India</td>
+                                            <td style="width: 15%;">23/12/2012</td>
+                                            <td style="width: 15%;">Paid</td>
+                                            <td>
+                                                <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-ok"></i> </button>
+                                                <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-edit"></i> </button>
+                                                <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-remove"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 70px;">5</td>
+                                            <td style="width: 15%;">Ravi Kumar</td>
+                                            <td style="width: 15%;">India</td>
+                                            <td style="width: 15%;">23/12/2012</td>
+                                            <td style="width: 15%;">Paid</td>
+                                            <td>
+                                                <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-ok"></i> </button>
+                                                <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-edit"></i> </button>
+                                                <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-remove"></i> </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 70px;">6</td>
+                                            <td style="width: 15%;">Ravi Kumar</td>
+                                            <td style="width: 15%;">India</td>
+                                            <td style="width: 15%;">23/12/2012</td>
+                                            <td style="width: 15%;">Paid</td>
+                                            <td>
+                                                <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-ok"></i> </button>
+                                                <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-edit"></i> </button>
+                                                <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-remove"></i> </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <template id="header_tpl_15591151465252">
+                                    <tr>
+                                        <th style="width: 70px;">#index#</th>
+                                        <th style="width: 15%;">#name#</th>
+                                        <th style="width: 15%;">#position#</th>
+                                        <th style="width: 15%;">#date#</th>
+                                        <th style="width: 15%;">#type#</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </template>
+                                <template id="tpl_15591151465252">
+                                    <tr>
+                                        <td style="width: 70px;">#index#</td>
+                                        <td style="width: 15%;">#name#</td>
+                                        <td style="width: 15%;">#position#</td>
+                                        <td style="width: 15%;">#date#</td>
+                                        <td style="width: 15%;">#type#</td>
+                                        <td>
+                                            <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-ok"></i> </button>
+                                            <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-edit"></i> </button>
+                                            <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-remove"></i> </button>
+                                        </td>
+                                    </tr>
+                                </template>
+                                <!-- 设置面板End -->
+                            </div>
+                            <div class="tab-pane fade" id="demo2" style="">
+                                <div style="height:310px; overflow: auto;" id="list_1559115159270" class="king-list3 m0">
+                                    <table class="king-list3-table ranger-box">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:42px;">1</td>
+                                                <td style="width:40%;">项目一</td>
+                                                <td>60</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:42px;">2</td>
+                                                <td style="width:40%;">项目二</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:42px;">3</td>
+                                                <td style="width:40%;">项目三</td>
+                                                <td>40</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:42px;">4</td>
+                                                <td style="width:40%;">项目四</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:42px;">5</td>
+                                                <td style="width:40%;">项目五</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:42px;">6</td>
+                                                <td style="width:40%;">项目六</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:42px;">7</td>
+                                                <td style="width:40%;">项目七</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 设置面板Start -->
+                                <template id="ranger_nodata_tpl">
+                                    <tr>
+                                        <td colspan="3"> 没有数据 </td>
+                                    </tr>
+                                </template>
+                                <template id="ranger_tpl">
+                                    <tr>
+                                        <td style="width:42px;">#index#</td>
+                                        <td style="width:40%;">#name#</td>
+                                        <td>#score#</td>
+                                    </tr>
+                                </template>
+                                <!-- 设置面板End -->
+                            </div>
+                            <div class="tab-pane fade" id="demo3" style=""> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content end -->
+        </div>
+    </div>
+    <script>
+        $(function(){
+             var li = $('.navi li');
+             li.each(function(){
+             $(this).click(function(){
+             if( $(this).hasClass('c-open')){
+                $(this).find('ul').slideUp(350);
+                $(this).removeClass('c-open');
+             }else{
+               $(this).find('ul').slideDown(350);
+               $(this).addClass('c-open');
+               }
+              })
+           });
+        })
+    </script>
+    <script>
+        $(function(){
+                function renderTpl(str, cfg) {
+                    var re = /(#(.+?)#)/g;
+
+                    return str.replace(re, function() {
+                        var val = cfg[arguments[2]]+'';
+                        if(typeof val == 'undefined') {
+                            val = '';
+                        }
+                        return val;
+                    });
+                }
+
+                // 异步请求后台数据
+                $.ajax({
+                    url: 'https://magicbox.bk.tencent.com/static_api/v3/components/table7/data.json',
+                    type: 'GET',
+                    success: function(res){
+                        var _html = ' ';
+                        var list = res.items;
+                        var tpl = $('#tpl_15591151465252').html();
+                        var headerTpl =  $('#header_tpl_15591151465252').html();
+                        for (var i=0,len=list.length; i < len; i++){
+                            var item = list[i];
+                            _html += renderTpl(tpl, item)
+                        }
+                        $('.ranger-box2 tbody').html(_html);
+                        $('.ranger-box2 thead').html(renderTpl(headerTpl,res.catalogues));
+                    }
+                });
+            });
+    </script>
+    <script>
+        function renderTpl(str, cfg) {
+                var re = /(#(.+?)#)/g;
+
+                return str.replace(re, function() {
+                    var val = cfg[arguments[2]]+'';
+                    if(typeof val == 'undefined') {
+                        val = '';
+                    }
+                    return val;
+                });
+            }
+
+            function initRanger(conf){
+                // 异步请求后台数据
+                $.ajax({
+                    url: conf.url,
+                    type: 'GET',
+                    dataType: conf.dataType,
+                    success: function(res){
+                        //获取数据成功
+                        if (res.code == 0){
+                            var _html = ' ';
+                            var list = res.data;
+
+                            var tpl = $('#ranger_tpl').html();
+                            if (list.length == 0){
+                                _html = $('#ranger_nodata_tpl').html();
+                            }else{
+                                for (var i=0,len=list.length; i < len; i++){
+                                    var item = list[i];
+                                    _html += renderTpl(tpl, item)
+                                }
+                            }
+                            $(conf.container).html(_html);
+                        }
+                    }
+                });
+            }
+    </script>
+    <script>
+        initRanger({
+                url: 'https://magicbox.bk.tencent.com/static_api/v3/components/list3/demo.json',
+                dataType: 'json',
+                container: '#list_1559115159270 .ranger-box tbody'
+            });
+    </script>
+</body>
+
+<script>
+
+
+</script>
+
+</html>
