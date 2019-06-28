@@ -15,6 +15,7 @@ import os
 # ===============================================================================
 # 数据库设置, 正式环境数据库设置
 # ===============================================================================
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -25,5 +26,15 @@ DATABASES = {
         'PORT': os.environ.get('DB_PORT'),
     },
 }
-
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # 默认用mysql
+        'NAME': 'hanshiqindb2',                        # 数据库名 (默认与APP_ID相同)
+        'USER': 'root',                            # 你的数据库user
+        'PASSWORD': 'Uqv.83WuNm',                        # 你的数据库password
+        'HOST': '10.0.1.192',                   		   # 数据库HOST
+        'PORT': '3306',                        # 默认3306
+    },
+}
 LOG_PERSISTENT_DAYS = 90
